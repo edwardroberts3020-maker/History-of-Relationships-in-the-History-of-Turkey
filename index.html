@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History Project: Social Dynamics</title>
+    <title>History Project: Socio-Cultural Analysis</title>
     <style>
         :root {
             --paper: #fdfaf3;
             --heart-yellow: #ffee32;
             --button-yellow: #ffee32;
             --text-purple: #5a189a;
-            --transition-speed: 0.6s;
         }
 
         body {
             margin: 0; padding: 0;
-            font-family: 'Georgia', serif;
+            font-family: 'Times New Roman', serif;
             background: var(--paper);
             color: #333;
-            transition: background 1.5s ease;
+            transition: background 2s ease;
             overflow-x: hidden;
         }
 
@@ -30,34 +29,36 @@
         .heart {
             position: absolute; color: var(--heart-yellow);
             font-size: 20px; opacity: 0; transition: opacity 2s;
-            animation: float 4s infinite ease-in-out;
+            animation: float 5s infinite ease-in-out;
         }
 
         @keyframes float {
             0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(20deg); }
+            50% { transform: translateY(-30px) rotate(15deg); }
         }
 
         .content {
             position: relative; z-index: 1;
-            max-width: 800px; margin: 0 auto;
-            padding: 100px 20px; line-height: 1.8;
+            max-width: 850px; margin: 0 auto;
+            padding: 80px 25px; line-height: 1.8;
         }
 
-        .academic-intro { margin-bottom: 400px; }
-
+        .academic-jargon { margin-bottom: 250px; font-size: 1.05rem; text-align: justify; }
+        
         .letter-section {
-            opacity: 0; transition: opacity 2s, transform 2s;
-            transform: translateY(50px); font-size: 1.3rem;
-            margin-bottom: 200px;
+            opacity: 0; transition: opacity 2.5s, transform 2.5s;
+            transform: translateY(40px); font-size: 1.25rem;
+            margin-bottom: 150px; font-family: 'Georgia', serif;
         }
 
         .letter-section.visible { opacity: 1; transform: translateY(0); }
 
-        .big-question {
-            font-family: 'Arial', sans-serif; font-size: 3rem;
-            font-weight: bold; color: var(--text-purple);
-            margin-bottom: 60px; text-align: center;
+        .name-highlight { color: #d4af37; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
+
+        .big-ask {
+            font-family: 'Arial', sans-serif; font-size: 3.5rem;
+            font-weight: 900; color: var(--text-purple);
+            text-align: center; margin-top: 100px; margin-bottom: 60px;
             opacity: 0; transition: opacity 2s;
         }
 
@@ -65,6 +66,7 @@
             display: flex; flex-direction: column;
             align-items: center; gap: 30px;
             opacity: 0; transition: opacity 2s;
+            padding-bottom: 200px;
         }
 
         .visible { opacity: 1 !important; }
@@ -74,28 +76,19 @@
             background-color: var(--button-yellow);
             color: var(--text-purple);
             border: 3px solid var(--text-purple);
-            padding: 20px 40px;
-            font-size: 1.4rem; font-weight: bold;
+            padding: 22px 45px;
+            font-size: 1.6rem; font-weight: bold;
             border-radius: 12px; cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            min-width: 320px; text-align: center;
-            perspective: 1000px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            min-width: 340px; text-align: center;
         }
 
-        /* Hover flip: Purple box, Yellow text */
-        .btn:hover {
-            background-color: var(--text-purple);
-            color: var(--button-yellow);
-        }
+        .btn:hover { background-color: var(--text-purple); color: var(--button-yellow); }
 
-        .nerd-text {
-            display: block; font-size: 0.85rem;
-            font-weight: normal; color: #999; /* Grey text */
-            margin-top: 8px;
-        }
+        .nerd-text { display: block; font-size: 0.9rem; font-weight: normal; color: #777; margin-top: 10px; }
+        .btn:hover .nerd-text { color: var(--button-yellow); }
 
-        /* Animation class for the No -> Yes flip */
-        .flip-transform {
+        .flipped {
             transform: rotateX(360deg);
             background-color: var(--text-purple) !important;
             color: var(--button-yellow) !important;
@@ -107,31 +100,36 @@
 <div id="hearts-container"></div>
 
 <div class="content">
-    <div class="academic-intro">
-        <p style="font-style: italic; color: #888;">History 302: Socio-Cultural Evolutions | Draft 1.04</p>
-        <h1>Evolution of Interpersonal Dynamics in Turkey</h1>
-        <p>The history of a romantic, or rather any other sort of turkish relationship that involves any sort of sexual or romantic aspect has evolved by quite alot over the years. This progression can be analyzed through the lens of sociopolitical paradigm shifts within the late Ottoman transition and the subsequent early Republican era.</p>
-        <p>The cross-pollination of Westernized courtship rituals and traditionalist structures created a unique dichotomy. Furthermore, the linguistic transition during the alphabet reform significantly altered the semiotics of romantic correspondence, moving to more direct phonetic expressions...</p>
+    <div class="academic-jargon">
+        <p style="font-style: italic; color: #777;">Paper ID: HIST-2026-TR | Subject: Socio-Cultural Interpersonal Evolutions</p>
+        <h1>Structuralist Paradigms in Anatolian Courtship (1923-Present)</h1>
+        
+        <p>The history of a romantic, or rather any other sort of turkish relationship that involves any sort of sexual or romantic aspect has evolved by quite alot over the years. The sociological scaffolding of these interactions is deeply rooted in the transition from the <i>Tanzimat</i> era's semi-feudal kinship obligations to the late-modernist focus on nuclear autonomy. This metamorphosis is not merely a byproduct of legislative secularization but is fundamentally linked to the urbanization of the Anatolian heartland, which catalyzed a re-evaluation of the <i>mahalle</i> pressure systems in favor of individualistic romantic agency.</p>
+        
+        <p>Furthermore, the linguistic semiotics of Turkish romance underwent a profound 'purification' during the 1928 Language Reform. By stripping away the heavy Persian and Arabic loanwords used in classical <i>Divan</i> poetry, the vocabulary of affection transitioned from an abstract, metaphysical ideal toward a visceral, direct linguistic framework. This shift facilitated a new era of 'telegraphic intimacy,' where the speed of communication began to mirror the accelerating industrialization of the state, eventually laying the digital groundwork for the algorithmic courtship seen in the contemporary 2020s landscape.</p>
+        
+        <p>Analyzing the socio-economic variables of the last decade, we observe that the commodification of romantic milestones has created a synthetic ritualism. Yet, beneath this veneer of modernity, the intrinsic core of interpersonal loyalty—often described as <i>vefa</i>—continues to act as a stabilizing force. This enduring cultural trait suggests that while the medium of interaction (from hand-written letters to digital interfaces) has changed, the psychological trajectory of the 'Turkish Heart' remains tethered to a history of profound emotional investment and communal resilience.</p>
     </div>
 
     <div class="letter-section" id="letter">
         <p>Romance experienced in turkey nowadays has truly come alot of ways. You yourself may have experienced love in this country.</p>
         <p>Maybe a boy in your life who came out of nowhere? He loves you alot you know? He’d just about anything for you, like say learn HTML at 5 am in the morning. He adores you so so much.</p>
         <p>Every second you spend with him, you bestow upon him happiness the likes of which he’s never even come close to imagining, You are without a doubt the greatest thing that has happened to him, and ever will happen to him. He loves you from the bottom of his heart. He deeply longs to be with you for all of eternity. You are, and always will be, his person.</p>
+        <p>So, <span class="name-highlight">Batool</span>, meri jaan, love of my life, my darling,</p>
     </div>
 
-    <h2 class="big-question" id="bigQ">So, Batool, meri jaan, love of my life, my darling, will you Be My Valentines?</h2>
+    <h2 class="big-ask" id="bigQ">Will You Be My Valentine?</h2>
     
     <div class="btn-group" id="btnGroup">
-        <button class="btn" onclick="alert('❤️ Best decision ever! ❤️')">YES!</button>
+        <button class="btn" onclick="alert('❤️ Forever yours! ❤️')">YES!</button>
         <button class="btn" id="noBtn">No</button>
     </div>
 </div>
 
 <script>
-    // 1. Generate Hearts
+    // 1. Generate Floating Hearts
     const container = document.getElementById('hearts-container');
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 30; i++) {
         const heart = document.createElement('div');
         heart.innerHTML = '💛'; heart.className = 'heart';
         heart.style.left = Math.random() * 100 + 'vw';
@@ -140,47 +138,43 @@
         container.appendChild(heart);
     }
 
-    // 2. Scroll Triggers
+    // 2. Scroll Logic
     window.addEventListener('scroll', () => {
         const scrollPos = window.scrollY;
         const hearts = document.querySelectorAll('.heart');
         
-        if (scrollPos > 350) {
+        if (scrollPos > 450) {
             document.body.style.background = "linear-gradient(to bottom, #fdfaf3, #ffccd5, #ffb3c1)";
             document.getElementById('letter').classList.add('visible');
-            hearts.forEach(h => h.style.opacity = '0.7');
+            hearts.forEach(h => h.style.opacity = '0.8');
         }
-        if (scrollPos > 850) {
+        if (scrollPos > 1000) {
             document.getElementById('bigQ').classList.add('visible');
             document.getElementById('btnGroup').classList.add('visible');
         }
     });
 
-    // 3. Proximity Logic & Flip Animation
-    let flipped = false;
+    // 3. The Proximity Flip Logic
+    let isFlipped = false;
     document.addEventListener('mousemove', (e) => {
-        if (flipped) return;
+        if (isFlipped) return;
 
         const noBtn = document.getElementById('noBtn');
         const rect = noBtn.getBoundingClientRect();
-        
-        // Calculate distance from mouse to center of button
         const btnCenterX = rect.left + rect.width / 2;
         const btnCenterY = rect.top + rect.height / 2;
+        
         const distance = Math.sqrt(Math.pow(e.clientX - btnCenterX, 2) + Math.pow(e.clientY - btnCenterY, 2));
-
-        // Trigger when mouse is within double the height (~120-150px)
-        const triggerDistance = rect.height * 2;
+        const triggerDistance = rect.height * 2; // Twice the height
 
         if (distance < triggerDistance) {
-            flipped = true;
-            noBtn.classList.add('flip-transform');
+            isFlipped = true;
+            noBtn.classList.add('flipped');
             
-            // Change text halfway through the flip for a clean effect
             setTimeout(() => {
                 noBtn.innerHTML = 'YES! <span class="nerd-text">(sorry but you\'re stuck with this nerd :p)</span>';
-                noBtn.onclick = () => alert('❤️ Smart move! No escape now! ❤️');
-            }, 150);
+                noBtn.onclick = () => alert('❤️ I love you, Batool! ❤️');
+            }, 200);
         }
     });
 </script>
